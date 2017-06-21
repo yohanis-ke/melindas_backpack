@@ -46,7 +46,7 @@ Refactoring: Improve any comments that don't align with what the code really doe
 ## Code Smell 3 - Bad Method Name
 Code Smell: Is there a method in Backpack that needs a better name?
 
-Refactoring: Pick a more meaningful name, and replace all references with the new name.
+Refactoring: Pick a more meaningful name, and replace all references with the new name. Note: In this case, *all* references may include changing a test.
 
 ## Code Smell 4 - Long Method
 Code Smell: Is the `prepare` method doing too much? Is it too long to keep in your head all at once?
@@ -68,6 +68,11 @@ Refactoring: Delete the Dead Code
 Code Smell: Do you consider any of the comments in Backpack unnecessary? This is your judgement call about whether they add value or not.
 
 Refactoring: Delete the Unnecessary Comment(s)
+
+## Code Smell 7 - Duplicate Code
+Code Smell: Are there conditional branches (if/elses) in the `prepare` method (or one of its subroutines) that contain duplicate code?
+
+Refactoring: Consolidate the Conditionals. If the code is run in every if/else branch... it needn't be in the conditional at all. Pull it out!
 
 ## Stretch
 - No really, these are stretch. They are meant to challenge you if the above was too easy.
