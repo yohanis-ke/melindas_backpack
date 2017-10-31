@@ -1,6 +1,6 @@
 require 'minitest/autorun'
 require 'minitest/pride'
-require 'factory_girl'
+require 'factory_bot'
 require 'pry'
 
 require './backpack.rb'
@@ -8,7 +8,7 @@ require './factories.rb'
 
 class BackpackTest < MiniTest::Test
 
-  include FactoryGirl::Syntax::Methods
+  include FactoryBot::Syntax::Methods
 
   ##### TESTS ABOUT BRINGING THE RIGHT CLOTHING #####
   def test_that_always_has_pants_and_shirt
